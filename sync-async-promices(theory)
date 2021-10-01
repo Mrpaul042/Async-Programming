@@ -1,0 +1,67 @@
+Sync vs Async
+
+Making Async Operations eeffectively
+Sync:sequel/one by one 
+console.log("app is started....");
+console.log("app is under construction....");
+console.log("app is completed....");
+
+Async:
+
+setTimeout:after a specific intervals of time
+setTimeout(()=>{
+console.log("hello guvi");
+},7000);
+
+latentfloupe:
+call stack: place for the output/execution
+web api:inbuilt calls(setTimeout);
+call back queue:lines of code to be executed one after another 
+
+Call back:when a function simply accept one more function as a paremeter...
+A function taking one more function ( A function which is sent as a parameter);
+
+ex:map(function foo())
+here foo is called as the call back function
+
+Naming Callbackfucntions:
+
+
+callback hell:Multilevel functions can be created ,.....
+(bad practice..)
+callback hell is a difficult to retract
+
+callback:are useful for short asyncronous programming(setTimeout);
+
+PROMISES...:To overcome call back hell scenario
+alternate choice for the call  back 
+if(condition):
+Need of promise:to handle async result of an ops..
+
+Promise is an Object  which will accept function as a parameter.Inside 
+the function we do have 2 parameters(resolve, reject),
+Promise has 3 states 
+1.pending..
+2.fulfilled... 
+3.rejected...
+
+Lets create a function which will  return promise..
+
+To access the result of the promise(fulfilled), use .then 
+To access the result of the promise(rejected),use .catch
+
+
+for a single promise -> single .then
+
+
+How to handle multiple promises...at a time 
+we can use Promise.all([])
+it will wait untill all the promises are resolved..
+return the values of the promises
+
+
+..if rejected?? in middle??
+
+
+particular rejected value will be printed..
+rest of them ignored...
